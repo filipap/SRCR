@@ -1,8 +1,8 @@
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
-% SIST. REPR. CONHECIMENTO E RACIOCINIO - MiEI/3 (ficha pratica 01)
+% SIST. REPR. CONHECIMENTO E RACIOCINIO - MiEI/3 (ficha pratica 02)
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
-% Base de Conhecimento com informacao genealogica. 
+% Programação em Logica. 
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % SICStus PROLOG: Declaracoes iniciais
