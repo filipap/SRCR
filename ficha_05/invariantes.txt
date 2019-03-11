@@ -1,0 +1,13 @@
+INVARIANTES
+
+Representação
++/- T :: I -> estamos a representar uma nova estrutura de conhecimento
+
++ -> adição de conhecimento
+- -> retirada de conhecimento
+I -> regra de teste
+T -> o conhecimento no qual se aplica a regra de teste
+
+
+o predicado assert substitui-se pelo evolução    \  VER FICHA 5
+o predicado retract substitui-se pelo involução  /
