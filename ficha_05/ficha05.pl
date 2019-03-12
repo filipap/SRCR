@@ -70,6 +70,13 @@ insercao( Termo ) :- assert( Termo ).
 insercao( Termo ) :- retract( Termo ),!,fail.
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
+% Extensao do predicado insercao : Termo -> {V,F}
+
+remocao( Termo ) :- retract( Termo ).
+
+remocao( Termo ) :- assert( Termo ),!,fail.
+
+%--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do predicado solucoes: Formato,Relacao,ListaSolucoes -> {V,F}
 
 solucoes(F,R,LS) :- 
@@ -83,6 +90,7 @@ solucoes(F,R,LS) :-
 
 construir(LS,S):-
 		retract(tmp(X)),
+		!,
 		construir([X|LS],S).
 
 construir(S,S).
@@ -116,7 +124,7 @@ comprimento(S,N):-length(S,N).
 
 -filho( F,P ) :: (solucoes( (F),(idade( F,I )),S ),
                   comprimento( S,N ), 
-				  N == 0). 
+				  N == 0).  
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Invariante Estrutural (pai): nao permitir a insercao de conhecimento
@@ -162,6 +170,15 @@ evolucao( Termo ) :-
 		insercao(Termo),
 		teste(Lista).
 
+
+%--------------------------------- - - - - - - - - - -  -  -  -  -   -
+% Extensao do predicado que permite a involucao do conhecimento
+
+involucao( Termo ) :- 
+		Termo,
+		solucoes(Invariante,-Termo::Invariante,Lista),
+		remocao(Termo),
+		teste(Lista).
 
 
 
